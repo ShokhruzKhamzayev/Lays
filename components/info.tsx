@@ -5,7 +5,7 @@ import NumberTicker from "./numberTicker";
 
 export default function Info() {
     return (
-        <div>
+        <div className="custom-container">
             <div className="flex justify-between items-center mt-[70px]">
                 <div className="bg-[#FFF0DE] w-1/2 flex justify-between items-center py-[30px] px-[10px]">
                     <div>

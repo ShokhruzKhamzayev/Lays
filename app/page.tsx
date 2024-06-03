@@ -1,6 +1,10 @@
+import AboutProduct from "@/components/aboutProduct";
+import Contact from "@/components/contact";
 import Header from "@/components/header";
 import Info from "@/components/info";
 import Main from "@/components/main";
+import WorldClass from "@/components/worldClass";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,9 +16,10 @@ export default function Home() {
           <Main />
         </div>
       </div>
-      <div className="custom-container">
-        <Info />
-      </div>
+      <Info />
+      <AboutProduct />
+      <WorldClass />
+      <Contact />
     </>
   );
 }
