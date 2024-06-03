@@ -5,7 +5,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export default function Header() {
     return (
-        <header className="custom-container bg-red-500 flex justify-between items-center text-white">
+        <header className="custom-container flex justify-between items-center max-h-[12vh] text-white py-[25px]">
             <Link href={'/'} className="flex gap-[8px] items-center">
                 <Image src={'/logo.png'} alt="The logo of company" width={40} height={40} />
                 <h1 className="text-3xl font-semibold">Potato</h1>

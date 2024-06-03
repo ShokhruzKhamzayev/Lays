@@ -1,9 +1,17 @@
+import Header from "@/components/header";
 import Main from "@/components/main";
 
 export default function Home() {
   return (
-    <div className="custom-container">
-      <Main />
-    </div>
+    <>
+      <div className="one-screen relative overflow-hidden">
+        <div className="bg-secondary h-screen w-full absolute -z-10 top-0 overflow-hidden">
+        </div>
+        <div className="custom-container">
+          <Header />
+          <Main />
+        </div>
+      </div>
+    </>
   );
 }

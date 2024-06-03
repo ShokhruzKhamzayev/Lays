@@ -4,11 +4,11 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Main() {
     return (
-        <main className="bg-red-500 text-white">
+        <main className="text-white max-h-[88vh] flex flex-col justify-between overflow-hidden relative">
             <div className="starter">
                 <h1 className="text-[72px] font-bold tracking-wider text-center">Testy Chips</h1>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-[50px]">
                 <div className="left-main max-w-[33%]">
                     <div className="flex items-center gap-[7px]">
                         <Image src={'/users.png'} width={110} height={44} alt="image of users" />
@@ -19,7 +19,7 @@ export default function Main() {
                         <FaLongArrowAltRight />
                     </Link>
                 </div>
-                <Image className="max-w-[33%]" src={'/main-content.png'} width={480} height={671} alt="picture of lays" />
+                <Image src={'/main-content.png'} width={480} height={671} alt="picture of lays" />
                 <div className="max-w-[33%]">
                     <div className="btns">
                         <button>Low</button>
@@ -35,6 +35,7 @@ export default function Main() {
                     </div>
                 </div>
             </div>
+            <div className="bg-white rounded-full w-full h-[1220px] absolute left-0 bottom-0 translate-y-[70%] -z-10 overflow-hidden"></div>
         </main>
     )
 }
