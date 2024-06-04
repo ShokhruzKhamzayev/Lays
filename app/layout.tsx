@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from 'sonner'
 
 const poppins = Poppins({ subsets: ["latin"], weight: ['400', '500', '600', '800', '700', '900'] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} bg-bg text-text`}>
         <NextTopLoader showSpinner={false} color="#B1464A" />
+        <Toaster position="top-center" />
         {children}
       </body>
     </html>

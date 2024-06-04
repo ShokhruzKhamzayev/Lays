@@ -2,6 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiCart } from "react-icons/bi";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+import {
+    Drawer,
+    DrawerClose,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/drawer"
+
 
 export default function Header() {
     return (
@@ -17,12 +36,27 @@ export default function Header() {
                 <Link className="text-[16px] font-medium tracking-wide" href={'/'}>Services</Link>
             </nav>
             <div className="space-x-[20px]">
-                <button className="bg-white p-[15px] rounded-[6px] text-text">
-                    <FaMagnifyingGlass />
-                </button>
-                <button className="bg-white p-[15px] rounded-[6px] text-text">
-                    <BiCart />
-                </button>
+                <Dialog>
+                    <DialogTrigger className="bg-white p-[15px] rounded-[6px] text-text"><FaMagnifyingGlass /></DialogTrigger>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>Are you absolutely sure?</DialogTitle>
+                            <DialogDescription>
+                                This action cannot be undone. This will permanently delete your account
+                                and remove your data from our servers.
+                            </DialogDescription>
+                        </DialogHeader>
+                    </DialogContent>
+                </Dialog>
+                <Drawer>
+                    <DrawerTrigger className="bg-white p-[15px] rounded-[6px] text-text"><BiCart /></DrawerTrigger>
+                    <DrawerContent>
+                        <DrawerHeader>
+                            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                            <DrawerDescription>This action cannot be undone.</DrawerDescription>
+                        </DrawerHeader>
+                    </DrawerContent>
+                </Drawer>
             </div>
         </header>
     )

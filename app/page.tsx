@@ -1,5 +1,6 @@
 import AboutProduct from "@/components/aboutProduct";
 import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Info from "@/components/info";
 import Main from "@/components/main";
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutProduct />
       <WorldClass />
       <Contact />
+      <Footer />
     </>
   );
 }

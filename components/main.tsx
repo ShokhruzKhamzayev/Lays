@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import GradualSpacing from "./gradualSpacing";
 
 export default function Main() {
     return (
         <main className="text-white max-h-[88vh] flex flex-col justify-between overflow-hidden relative">
             <div className="starter">
-                <h1 className="text-[72px] font-bold tracking-wider text-center">Testy Chips</h1>
+                <GradualSpacing text="Testy Chips" className="text-[72px] font-bold tracking-wide text-center" />
             </div>
             <div className="flex justify-between mt-[50px]">
                 <div className="left-main max-w-[33%]">
