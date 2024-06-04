@@ -3,6 +3,14 @@ import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import GradualSpacing from "./gradualSpacing";
 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+
 export default function Main() {
     return (
         <main className="text-white max-h-[88vh] flex flex-col justify-between overflow-hidden relative">
@@ -20,23 +28,36 @@ export default function Main() {
                         <FaLongArrowAltRight />
                     </Link>
                 </div>
-                <Image src={'/main-content.png'} width={480} height={671} alt="picture of lays" />
-                <div className="max-w-[33%]">
-                    <div className="btns">
+                <Carousel className="max-w-[33%]">
+                    <CarouselContent>
+                        <CarouselItem>
+                            <Image src={'/main-content.png'} width={480} height={671} alt="picture of lays" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <Image src={'/main-content.png'} width={480} height={671} alt="picture of lays" />
+                        </CarouselItem>
+                        <CarouselItem>
+                            <Image src={'/main-content.png'} width={480} height={671} alt="picture of lays" />
+                        </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="text-text" />
+                    <CarouselNext className="text-text" />
+                </Carousel>
+                <div className="max-w-[33%] relative">
+                    <div className="btns flex gap-[30px] -rotate-90 absolute top-0 right-0 translate-x-[40%]">
                         <button>Low</button>
                         <button>Medium</button>
                         <button>Best</button>
-                        <Link href={'/'}>
-                            <div>
-                                <FaLongArrowAltRight />
-
-                            </div>
-                            Explore
-                        </Link>
                     </div>
+                    <Link href={'/'} className="mt-[170px] flex items-center gap-[8px] text-bg">
+                        <div className="border-2 border-bg text-bg py-[6px] px-[10px] rounded-[7px]">
+                            <FaLongArrowAltRight size={40} />
+                        </div>
+                        <span className="font-semibold text-2xl">Explore</span>
+                    </Link>
                 </div>
             </div>
-            <div className="bg-white rounded-full w-full h-[1220px] absolute left-0 bottom-0 translate-y-[70%] -z-10 overflow-hidden"></div>
+            <div className="bg-white rounded-full w-full h-[1220px] absolute left-0 bottom-0 translate-y-[70%] -z-10 overflow-hidden xl:block hidden"></div>
         </main>
     )
 }

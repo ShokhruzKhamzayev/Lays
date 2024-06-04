@@ -50,7 +50,7 @@ export default function Header() {
                 </Dialog>
                 <Drawer>
                     <DrawerTrigger className="bg-white p-[15px] rounded-[6px] text-text"><BiCart /></DrawerTrigger>
-                    <DrawerContent>
+                    <DrawerContent className="min-h-[80vh]">
                         <DrawerHeader>
                             <DrawerTitle>Are you absolutely sure?</DrawerTitle>
                             <DrawerDescription>This action cannot be undone.</DrawerDescription>
